@@ -1,0 +1,121 @@
+
+ @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;800&display=swap');
+*{
+    padding: 0%;
+    margin: 0%;
+    outline: none;
+    box-sizing: border-box;
+}
+:root {
+    --primary1: hsl(193, 38%, 86%);
+    --primary2: hsl(150, 100%, 66%);
+    --neu1:hsl(217, 19%, 38%);
+    --neu2:hsl(217, 19%, 24%);
+    --neu3:hsl(218, 23%, 16%);
+    --fs:28px;
+    --fw:800;
+    --ff:'Manrope', sans-serif;
+
+}
+body{
+    background: var(--neu3);
+}
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 3rem);
+}
+article{
+    position: relative;
+    max-width: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: var(--neu2);
+    min-width: 444px;
+    border-radius: 15px;
+    padding: 3rem;
+    
+}
+h4{
+    margin-bottom: 2rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-family: var(--ff);
+    color: var(--primary2);
+}
+p{
+    margin-bottom: 2rem;
+    font-size: var(--fs);
+    font-family: var(--ff);
+    font-weight: var(--fw);
+    color: var(--primary1);
+    word-wrap: break-word;
+    text-align: center;
+    max-width: 444px;
+    padding: 1rem;
+}
+.divider{
+    margin-bottom: 2rem;
+    width: 444px ;
+    height: 1rem;
+    object-fit: contain;
+    background-image: url('images/pattern-divider-desktop.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+button{
+    cursor: pointer;
+    position: absolute;
+    bottom: -5%;
+    background: var(--primary2);
+    border: none;
+    width: 3rem;
+    height: 3rem;
+    display: grid;
+    place-items: center;
+    left: 45.99%;
+    border-radius: 50%;
+    transition: .3s linear;
+    
+}
+button:hover{
+    box-shadow: 0 0 25px var(--primary2);
+    transition: .3s linear;
+}
+.attribution{
+    text-align: center;
+    color: var(--primary1);
+    font-family: var(--ff) !important;
+}
+.attribution a{
+    color: var(--primary2);
+    text-decoration: none;
+}
+@media screen and (max-width: 420px) {
+    main{
+        width: 100%;
+    }
+    article{
+        min-width: 60% !important;
+        max-width: 90%;
+        margin: 0% auto;
+    }
+    p{
+        width: 295px;
+    }
+    .divider{
+        background: url('images/pattern-divider-mobile.svg');
+        background-position: center;
+        max-width: 100%;
+    }
+    button{
+        left: 44%;
+    }
+    .attribution{
+        font-size: .8rem;
+    }
+}
